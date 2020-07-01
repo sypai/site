@@ -6,17 +6,25 @@
     size: A4 landscape;
 }
 
-body{
-    margin: 0;
+@media print{
+    .rest{
+        display: none;
+    }
+    .certificate-wrap{
+        margin: 0;
+        padding: 2rem;
+    }
 }
 
 .certificate-wrap{
+    margin: 3rem;
     padding: 3rem;
     width: 1280px;
     height: 906px;
 
     background: rgb(248, 245, 245);
     z-index: -2;
+    -webkit-print-color-adjust: exact;
 }
 
 .certificate-box{
@@ -28,6 +36,7 @@ body{
     display: block;
 
     position: relative;
+    -webkit-print-color-adjust: exact;
 }
 
 .certificate-box::before{
@@ -42,6 +51,7 @@ body{
 
     z-index: 11;
     position: absolute;
+    -webkit-print-color-adjust: exact;
 }
 
 .header{
@@ -140,4 +150,20 @@ body{
     color: #000;
     font-weight: 600;
     line-height: 1.2rem;
+}
+
+.rest{
+    margin: 3rem;
+}
+
+.p-btn{
+    height: 2rem;
+    width: 5rem;
+
+    border: 0;
+
+    background: rgb(61, 184, 255);
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
 }
