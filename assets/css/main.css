@@ -16,6 +16,7 @@ body{
     height: 906px;
 
     background: rgb(248, 245, 245);
+    z-index: -2;
 }
 
 .certificate-box{
@@ -29,17 +30,17 @@ body{
     position: relative;
 }
 
-.certificate-box::after{
+.certificate-box::before{
     content: "";
     background: url('../img/nsdc1.jpeg') no-repeat center;
-    opacity: 0.3;
+    opacity: 0.1;
 
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
 
-    z-index: -1;
+    z-index: 11;
     position: absolute;
 }
 
